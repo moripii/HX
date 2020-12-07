@@ -2,13 +2,15 @@
   1. About
 
   This package contains the source code of HX DOS extender.
-  It should be unzipped in HX's runtime directory. Furthermore, the 
-  HX developer support is needed.
+  It may be unzipped in HX's runtime directory, but this is no
+  requirement. What's required in any case is the HX developer 
+  support (HXDEV).
 
-  It may be necessary to slightly modify the Makefiles supplied.
+  It's likely that the Makefiles supplied in SRC and SRCEMU must
+  be modified before starting the make process.
   Please read the comments in SRC\Makefile and Src\Dirs first.
-  Please note that the WSOCK32 binary won't build because some modules are
-  missing due to copyright issues.
+  Also note that the WSOCK32 binary is excluded from the build
+  because some modules are missing due to copyright issues.
 
 
   2. Requirements
@@ -28,17 +30,18 @@
    -----------------------------------------------------------------
     DOSX         DOSX.exe, HX's DOSX substitute for Windows 3.1
     DPMILdr      NE/PE binary loader DPMILD16.EXE/DPMILD32.EXE
-    DPMIStub     MZ stubs DPMIST16.BIN/DPMIST32.BIN
     EditPE       EditPE.exe + ExtrMZ.exe
     HDPMI        HX's DPMI host HDPMI
     HXHelp       Open Watcom WD trap file for HX binaries
     HXLdr32      HXLdr32.exe + HXDOSLD.exe
     MZSupp       HX's MZ file format support
+    MZSupp16     HX's 16-bit MZ file format support
     PatchNE      PatchNE.exe
     PatchPE      PatchPE.exe
     PEStub       PEStub.exe
     SB16         SB16.dll
     SHDPMI       SHDPMI.exe + SHDPMIR.EXE
+    Stubs        MZ stubs DPMIST16.BIN/DPMIST32.BIN, LOADPE.BIN
     Vesa32       Vesa32.dll/Vesa32s.lib
 
   3.2. Directory SRCEMU
@@ -70,7 +73,7 @@
 
   4. History
 
-  __/__/2020, V2.19: VESAMTRR removed.
+  07.12.2020, V2.19: VESAMTRR removed.
                      Source for Win32 emulation moved to SRCEMU.
                      SRC\Makefile and SRCEMU\Makefile have 'install' branch.
                      SRC\EDITPE added.
