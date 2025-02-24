@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 0  # 獲取所有歷史記錄
       - name: Add upstream remote
         run: |
-          git remote add upstream https://github.com/原倉庫作者/原倉庫.git
+          git remote add upstream https://github.com/Baron-von-Riedesel/HX.git
       - name: Fetch upstream tags
         run: |
           git fetch upstream --tags
